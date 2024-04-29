@@ -76,20 +76,7 @@ const Banner = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="">
-          <img
-            className=" mx-auto rounded-xl"
-            src="https://i.ibb.co/m9y8bnW/banner3.jpg"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <img
-            className=" mx-auto rounded-xl"
-            src="https://i.ibb.co/kyW4phj/banner4.jpg"
-            alt=""
-          />
-        </SwiperSlide>
+       
       </Swiper>
     </>
   );
