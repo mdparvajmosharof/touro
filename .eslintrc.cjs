@@ -18,4 +18,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
 }

@@ -70,7 +70,7 @@ const Banner = () => {
                   VISIT TO YOUR ADDED TOURSITS SPOTS
                 </h2>
                 <div className="card-actions ">
-                  <Link to="/myspots"><button className="btn btn-primary">ALL Torists Spots</button></Link>
+                  <Link to="/myspots"><button className="btn btn-primary">My Torists Spots</button></Link>
                 </div>
               </div>
             </div>
