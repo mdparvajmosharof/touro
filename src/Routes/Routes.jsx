@@ -11,6 +11,9 @@ import InquiryForm from "../Pages/InquiryForm";
 import AddTouristsSpots from "../Pages/AddTouristsSpots";
 import Myspots from "../Pages/Myspots";
 import UpdateSpot from "../Pages/UpdateSpot";
+import AllTouristsSpots from "../Pages/AllTouristsSpots";
+import SpotDetails from "../Pages/SpotDetails";
+import CountrySpots from "../Pages/CountrySpots";
 
 
 const router = createBrowserRouter([
@@ -27,6 +30,17 @@ const router = createBrowserRouter([
                 path:"/estate/:id",
                 element:<PrivateRoutes><EstateDetails></EstateDetails></PrivateRoutes>,
                 loader:() => fetch('/estates.json')
+            },
+            {
+                path:"/allTouristsSpots",
+                element:<AllTouristsSpots></AllTouristsSpots>
+            },{
+                path: "/country/:countryName",
+                element:<CountrySpots></CountrySpots>
+            },
+            {
+                path:"/spotDetails/:id",
+                element: <PrivateRoutes><SpotDetails></SpotDetails></PrivateRoutes>
             },
             {
                 path:"/addTouristsSpots",

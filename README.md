@@ -1,6 +1,6 @@
 # Touro
 
-Live Site: [Touro](https://auth-Touro.web.app/)
+Live Site: [Touro](https://touro-auth.web.app/)
 
 ## Features and Characteristics
 

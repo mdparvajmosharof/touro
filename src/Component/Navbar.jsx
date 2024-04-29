@@ -23,13 +23,13 @@ const Navbar = () => {
         <NavLink to="/inquiryForm">Inquiry Form</NavLink>
       </li>
       <li>
+        <NavLink to="/allTouristsSpots">All Tourists Spots</NavLink>
+      </li>
+      <li>
         <NavLink to="/addTouristsSpots">Add Tourists Spots</NavLink>
       </li>
       <li>
         <NavLink to="/mySpots">My List</NavLink>
-      </li>
-      <li>
-        <NavLink to="/login">Log In</NavLink>
       </li>
     </>
   );

@@ -9,69 +9,82 @@ const UpdateSpot = () => {
   console.log(id);
   const [spot, setSpot] = useState([]);
 
-  useEffect(()=>{
-    fetch(`http://localhost:5000/update/${id}`)
-    .then(res => res.json())
-    .then(data => {
+  useEffect(() => {
+    fetch(
+      `https://touro-server-30r3lwtut-md-parvaj-mosharofs-projects.vercel.app/update/${id}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
         setSpot(data);
-    })
+      });
 
     console.log(spot);
+  }, [id]);
 
-  },[id])
+  const handleUpdateSpot = (e) => {
+    e.preventDefault();
+    const image = e.target.image.value;
+    const touristsSpotName = e.target.touristsSpotName.value;
+    const countryName = e.target.countryName.value;
+    const location = e.target.location.value;
+    const description = e.target.description.value;
+    const cost = e.target.cost.value;
+    const season = e.target.season.value;
+    const time = e.target.time.value;
+    const visitor = e.target.visitor.value;
+    const spotsData = {
+      image,
+      touristsSpotName,
+      countryName,
+      location,
+      description,
+      cost,
+      season,
+      time,
+      visitor,
+    };
 
-    const handleUpdateSpot = e =>{
-      e.preventDefault();
-      const image = e.target.image.value;
-      const touristsSpotName = e.target.touristsSpotName.value;
-      const countryName = e.target.countryName.value;
-      const location = e.target.location.value;
-      const description = e.target.description.value;
-      const cost = e.target.cost.value;
-      const season = e.target.season.value;
-      const time = e.target.time.value;
-      const visitor = e.target.visitor.value;
-      const spotsData = {image, touristsSpotName, countryName, location, description, cost, season, time, visitor}
+    console.log(spotsData);
 
-      console.log(spotsData);
-
-      fetch(`http://localhost:5000/update/${id}`, {
+    fetch(
+      `https://touro-server-30r3lwtut-md-parvaj-mosharofs-projects.vercel.app/update/${id}`,
+      {
         method: "PATCH",
         headers: {
-          "content-type" : "application/json"
+          "content-type": "application/json",
         },
-        body: JSON.stringify(spotsData)
-      })
-      .then(res => res.json())
-      .then(data => {
-        if(data.modifiedCount){
+        body: JSON.stringify(spotsData),
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount) {
           Swal.fire({
             icon: "success",
             title: "Tourists spots updated",
             showConfirmButton: false,
             timer: 1500,
-          })
-        }
-        else{
+          });
+        } else {
           Swal.fire({
             icon: "error",
             title: "Tourists spots can't updated.",
             showConfirmButton: false,
             timer: 1500,
-          })
+          });
         }
-      })
-
-        
-    }
+      });
+  };
 
   return (
     <div>
       <Navbar></Navbar>
       <div className="w-full flex justify-center my-10 ">
         {" "}
-        <h1 className=" font-extrabold mx-auto text-3xl">Update Tourists Spots</h1>
+        <h1 className=" font-extrabold mx-auto text-3xl">
+          Update Tourists Spots
+        </h1>
       </div>
 
       <form onSubmit={handleUpdateSpot} action="">
@@ -132,7 +145,7 @@ const UpdateSpot = () => {
               />
             </label>
             <label className="input input-bordered flex items-center gap-2">
-              Average Cost : 
+              Average Cost :
               <input
                 type="text"
                 name="cost"
@@ -175,9 +188,8 @@ const UpdateSpot = () => {
                 defaultValue={spot.visitor}
               />
             </label>
-            
           </div>
-          
+
           <div>
             <input
               className="btn btn-primary w-full"
