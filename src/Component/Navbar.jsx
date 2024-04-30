@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
   const { authInfo } = useContext(AuthContext);
@@ -110,7 +111,7 @@ const Navbar = () => {
           </div>
           {user ? (
             <>
-              <div
+              {/* <div
                 tabIndex={0}
                 role="button"
                 className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom"
@@ -123,7 +124,29 @@ const Navbar = () => {
                     // src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
                   />
                 </div>
+              </div> */}
+
+<Tooltip id="my-tooltip" />
+
+<div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar "
+                data-tooltip-id="my-tooltip"
+  data-tooltip-content={user.displayName}
+  data-tooltip-place="bottom"
+                // data-tip={user.displayName}
+              >
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src={user.photoURL}
+                    // src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  />
+                </div>
               </div>
+
+
               <Link className="btn" onClick={handleSignOut}>
                 Log Out
               </Link>

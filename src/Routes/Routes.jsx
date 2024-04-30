@@ -4,7 +4,6 @@ import Home from '../Pages/Home';
 import Login from "../Pages/Login";
 import Error from "../Pages/Error";
 import Resister from "../Pages/Resister";
-import UpdateProfile from "../Pages/UpdateProfile";
 import PrivateRoutes from "./PrivateRoutes";
 import EstateDetails from "../Component/EstateDetails";
 import InquiryForm from "../Pages/InquiryForm";
