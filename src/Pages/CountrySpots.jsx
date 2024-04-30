@@ -19,17 +19,17 @@ const CountrySpots = () => {
       });
   }, [countryN]);
 
-  return (
-    <div>
-      <Navbar></Navbar>
+  // return (
+  //   <div>
+  //     <Navbar></Navbar>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10">
-        {countryN.map((countrySpot) => (
-          <AllMySpot key={countrySpot._id} mySpot={countrySpot}></AllMySpot>
-        ))}
-      </div>
-    </div>
-  );
+  //     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10">
+  //       {countryN.map((countrySpot) => (
+  //         <AllMySpot key={countrySpot._id} mySpot={countrySpot}></AllMySpot>
+  //       ))}
+  //     </div>
+  //   </div>
+  // );
 };
 
 export default CountrySpots;
