@@ -2,16 +2,13 @@
 
 Live Site: [Touro](https://touro-auth.web.app/)
 
-## Features and Characteristics
 
-- **Property Listings**: Browse a wide range of residential real estate properties available for sale or rent.
-- **Detailed Descriptions**: Each property listing includes detailed descriptions, amenities, pricing, and location information.
-- **Image Gallery**: View high-quality images of each property to get a better sense of its features and layout.
-- **Search Functionality**: Easily search for properties based on location, price range, area, and more.
-- **Responsive Design**: Enjoy a seamless browsing experience across devices, including desktops, tablets, and smartphones.
+## Features
 
-## npm Package Used
+- **Explore Fascinating Destinations**: Discover a diverse array of destinations worldwide, from iconic landmarks to hidden gems.
+- **Comprehensive Destination Information**: Access detailed data for each destination, including tourist spot names, country names, locations, short descriptions, average costs, seasonality, travel times, and total visitors per year.
+- **Plan Your Dream Vacation**: Utilize the provided information to plan your perfect itinerary, tailored to your interests and preferences.
+- **User-Friendly Experience**: Enjoy a seamless browsing experience with our intuitive interface designed for easy navigation and accessibility.
+- **Stay Updated**: Stay informed about the latest travel trends, tips, and news through our regularly updated blog section, featuring insightful articles on travel destinations, travel hacks, and more.
 
-- **swiper**
-- **sweetalert2**
--
+
