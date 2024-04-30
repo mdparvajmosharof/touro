@@ -40,7 +40,7 @@ const AddTouristsSpots = () => {
     console.log(spotsData);
 
     fetch(
-      "https://touro-server-30r3lwtut-md-parvaj-mosharofs-projects.vercel.app/spots",
+      "https://touro-server-7vg0lsmba-md-parvaj-mosharofs-projects.vercel.app/spots",
       {
         method: "POST",
         headers: {

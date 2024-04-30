@@ -11,7 +11,7 @@ const UpdateSpot = () => {
 
   useEffect(() => {
     fetch(
-      `https://touro-server-30r3lwtut-md-parvaj-mosharofs-projects.vercel.app/update/${id}`
+      `https://touro-server-7vg0lsmba-md-parvaj-mosharofs-projects.vercel.app/update/${id}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -48,7 +48,7 @@ const UpdateSpot = () => {
     console.log(spotsData);
 
     fetch(
-      `https://touro-server-30r3lwtut-md-parvaj-mosharofs-projects.vercel.app/update/${id}`,
+      `https://touro-server-7vg0lsmba-md-parvaj-mosharofs-projects.vercel.app/update/${id}`,
       {
         method: "PATCH",
         headers: {

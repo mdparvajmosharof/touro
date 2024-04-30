@@ -16,7 +16,7 @@ const Myspots = () => {
 
   useEffect(() => {
     fetch(
-      `https://touro-server-30r3lwtut-md-parvaj-mosharofs-projects.vercel.app/myspots/${user?.email}`
+      `https://touro-server-7vg0lsmba-md-parvaj-mosharofs-projects.vercel.app/myspots/${user?.email}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -33,7 +33,7 @@ const Myspots = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!"
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
         // Swal.fire({
@@ -42,7 +42,7 @@ const Myspots = () => {
         //   icon: "success"
         // });
         fetch(
-          `https://touro-server-30r3lwtut-md-parvaj-mosharofs-projects.vercel.app/delete/${id}`,
+          `https://touro-server-7vg0lsmba-md-parvaj-mosharofs-projects.vercel.app/delete/${id}`,
           {
             method: "DELETE",
           }
@@ -51,14 +51,13 @@ const Myspots = () => {
           .then((data) => {
             console.log(data);
             // setMySpots(data);
-            if (data.deletedCount> 0) {
+            if (data.deletedCount > 0) {
               setDelete(!deleted);
-               Swal.fire({
-          title: "Deleted!",
-          text: "Your file has been deleted.",
-          icon: "success"
-        });
-              
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
             }
           });
       }

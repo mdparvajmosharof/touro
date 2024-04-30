@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const MySpot = ({ mySpot }) => {
   const handleDelete = (id) => {
     fetch(
-      `https://touro-server-30r3lwtut-md-parvaj-mosharofs-projects.vercel.app/delete/${id}`,
+      `https://touro-server-7vg0lsmba-md-parvaj-mosharofs-projects.vercel.app/delete/${id}`,
       {
         method: "DELETE",
       }

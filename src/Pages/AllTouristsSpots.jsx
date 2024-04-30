@@ -11,7 +11,7 @@ const AllTouristsSpots = () => {
   useEffect(() => {
     if (cost !== null) {
       fetch(
-        `https://touro-server-30r3lwtut-md-parvaj-mosharofs-projects.vercel.app/find/${cost}`
+        `https://touro-server-7vg0lsmba-md-parvaj-mosharofs-projects.vercel.app/find/${cost}`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -20,7 +20,7 @@ const AllTouristsSpots = () => {
         });
     } else {
       fetch(
-        `https://touro-server-30r3lwtut-md-parvaj-mosharofs-projects.vercel.app/myspots`
+        `https://touro-server-7vg0lsmba-md-parvaj-mosharofs-projects.vercel.app/myspots`
       )
         .then((res) => res.json())
         .then((data) => {
