@@ -27,7 +27,9 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/country")
+    fetch(
+      "https://touro-server-7vg0lsmba-md-parvaj-mosharofs-projects.vercel.app/country"
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
